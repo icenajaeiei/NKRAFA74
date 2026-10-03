@@ -34,20 +34,7 @@ export interface ConflictItem {
   reasons: string[];
 }
 
-export const CLUBS_LIST: string[] = [
-  'กรีฑา',
-  'ฟุตบอล',
-  'รักบี้',
-  'บาส',
-  'ดาบ',
-  'ฟุตซอล',
-  'Space',
-  'UAV',
-  'นิเทศ',
-  'พุทธศาส',
-  'แบดมินตัน',
-  'คอมโบ'
-];
+export const CLUBS_LIST: string[] = [''];
 
 export const PERIODS_LIST: string[] = [
   'รวมพลเช้า (07:30)',
