@@ -1,0 +1,77 @@
+{
+  "entities": {
+    "DischargeRecord": {
+      "title": "DischargeRecord",
+      "description": "Record of student discharges during a roll call session",
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "string",
+          "description": "Unique identifier of the record"
+        },
+        "date": {
+          "type": "string",
+          "description": "Date formatted in Thai/ISO e.g. 2026-10-03"
+        },
+        "time": {
+          "type": "string",
+          "description": "Time formatted e.g. 08:30"
+        },
+        "period": {
+          "type": "string",
+          "description": "Roll call session e.g. เช้า, บ่าย, ค่ำ"
+        },
+        "totalStudents": {
+          "type": "number",
+          "description": "Total original student headcount"
+        },
+        "dischargedCount": {
+          "type": "number",
+          "description": "Count of discharged students"
+        },
+        "presentCount": {
+          "type": "number",
+          "description": "Count of students present in line"
+        },
+        "reasonsBreakdown": {
+          "type": "object",
+          "description": "Key-value pair of reasons and their count"
+        },
+        "dischargedStudents": {
+          "type": "array",
+          "description": "List of discharged student details"
+        },
+        "notes": {
+          "type": "string",
+          "maxLength": 500,
+          "description": "Optional notes or remark"
+        },
+        "recordedBy": {
+          "type": "string",
+          "maxLength": 100,
+          "description": "Name or email of the person recording"
+        },
+        "createdAt": {
+          "type": "string",
+          "description": "Timestamp ISO string of creation"
+        }
+      },
+      "required": [
+        "id",
+        "date",
+        "time",
+        "totalStudents",
+        "dischargedCount",
+        "presentCount",
+        "dischargedStudents",
+        "createdAt"
+      ]
+    }
+  },
+  "firestore": {
+    "/discharge_records/{recordId}": {
+      "schema": "DischargeRecord",
+      "description": "Saved roll call discharge logs for checking history"
+    }
+  }
+}

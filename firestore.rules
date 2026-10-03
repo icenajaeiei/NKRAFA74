@@ -1,0 +1,31 @@
+rules_version = '2';
+service cloud.firestore {
+  match /databases/{database}/documents {
+    // Default deny catch-all
+    match /{document=**} {
+      allow read, write: if false;
+    }
+
+    function isValidId(id) {
+      return id is string && id.size() <= 128 && id.matches('^[a-zA-Z0-9_\\-]+$');
+    }
+
+    function isValidRecord(data) {
+      return data.id is string && data.id.size() <= 128
+        && data.date is string && data.date.size() <= 40
+        && data.time is string && data.time.size() <= 30
+        && data.totalStudents is number && data.totalStudents >= 0
+        && data.dischargedCount is number && data.dischargedCount >= 0
+        && data.presentCount is number && data.presentCount >= 0
+        && data.dischargedStudents is list && data.dischargedStudents.size() <= 300
+        && data.createdAt is string && data.createdAt.size() <= 50;
+    }
+
+    match /discharge_records/{recordId} {
+      allow get, list: if true;
+      allow create: if isValidId(recordId) && isValidRecord(request.resource.data);
+      allow update: if isValidId(recordId) && isValidRecord(request.resource.data);
+      allow delete: if true;
+    }
+  }
+}
