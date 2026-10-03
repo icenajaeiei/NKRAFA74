@@ -1,6 +1,6 @@
 import { Student } from '../types';
 
-export const SPREADSHEET_ID = '18FY5wDufedEcoxnjlHpLh1XV4IMcWsdicncDZ4W8Ui8';
+export const SPREADSHEET_ID = '19FZtsGEF3snd_9wuBveg63kYgF91M2wVPnrsy4n3iDU';
 export const SPREADSHEET_URL = `https://docs.google.com/spreadsheets/d/${SPREADSHEET_ID}/edit?usp=sharing`;
 
 const SHEET_CACHE_KEY = 'v1_google_sheet_clubs_cache';
