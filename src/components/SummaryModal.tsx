@@ -155,7 +155,7 @@ export const SummaryModal: React.FC<SummaryModalProps> = ({
             className="flex-1 py-2.5 px-4 bg-slate-900 hover:bg-slate-800 text-white rounded-xl font-semibold text-sm flex items-center justify-center gap-2 transition-colors shadow-sm"
           >
             <RotateCcw className="w-4 h-4" />
-            <span>เริ่มเช็คยอดรอบใหม่</span>
+            <span>เช็คยอดใหม่</span>
           </button>
           <button
             onClick={onClose}
