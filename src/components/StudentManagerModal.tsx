@@ -65,7 +65,7 @@ export const StudentManagerModal: React.FC<StudentManagerModalProps> = ({
             </div>
             <div>
               <div className="flex items-center gap-2">
-                <h3 className="font-bold text-base">จัดการชมรมและรายชื่อนักเรียน</h3>
+                <h3 className="font-bold text-base">จัดการชมรมและรายชื่อ</h3>
                 <span className="bg-emerald-500/20 text-emerald-300 border border-emerald-400/30 text-[10px] px-2 py-0.5 rounded-full font-semibold">
                   Google Sheets Live
                 </span>

@@ -74,7 +74,7 @@ export const HistoryView: React.FC<HistoryViewProps> = ({ records, onRefresh, is
             type="text"
             value={searchQuery}
             onChange={(e) => setSearchQuery(e.target.value)}
-            placeholder="ค้นหาตามวันที่ ช่วงเวลา ชื่อนักเรียน สาเหตุ..."
+            placeholder="ค้นหาตามวันที่ ช่วงเวลา ชื่อ สาเหตุ..."
             className="w-full pl-10 pr-4 py-2.5 bg-slate-50 hover:bg-slate-100/70 focus:bg-white border border-slate-200 rounded-xl text-sm focus:outline-none focus:border-indigo-500 focus:ring-2 focus:ring-indigo-100 transition-all"
           />
         </div>

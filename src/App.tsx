@@ -663,7 +663,7 @@ export default function App() {
                 <div className="p-3 overflow-y-auto flex-grow divide-y divide-slate-100">
                   {filteredStudents.length === 0 ? (
                     <div className="text-center py-8 text-slate-400 text-xs">
-                      ไม่พบชื่อนักเรียนที่ค้นหา
+                      ไม่เจอไรเลย
                     </div>
                   ) : (
                     filteredStudents.map((student) => {
