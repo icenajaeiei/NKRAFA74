@@ -175,7 +175,7 @@ export const StudentManagerModal: React.FC<StudentManagerModalProps> = ({
         {/* List of students */}
         <div className="p-4 overflow-y-auto flex-grow divide-y divide-slate-100 bg-slate-50/50">
           {filteredStudents.length === 0 ? (
-            <div className="text-center py-10 text-slate-400 text-sm">ไม่พบรายชื่อที่ตรงกับเงื่อนไข</div>
+            <div className="text-center py-10 text-slate-400 text-sm">ไม่เจอชื่อที่ตรงกับเงื่อนไข</div>
           ) : (
             filteredStudents.map(student => {
               const isEditing = editingStudentId === student.id;

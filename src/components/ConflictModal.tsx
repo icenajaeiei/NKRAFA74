@@ -47,8 +47,8 @@ export const ConflictModal: React.FC<ConflictModalProps> = ({
             <AlertTriangle className="w-5 h-5 text-amber-200" />
           </div>
           <div>
-            <h3 className="font-bold text-base">พบรายชื่อซ้ำซ้อน โปรดเลือกสาเหตุเดียว</h3>
-            <p className="text-xs text-rose-100">มีนักเรียน {conflicts.length} นาย ที่มีเหตุจำหน่ายมากกว่า 1 รายการ</p>
+            <h3 className="font-bold text-base">เลือกจำหน่ายอันนึง</h3>
+            <p className="text-xs text-rose-100">มี {conflicts.length} นาย</p>
           </div>
         </div>
 
@@ -62,7 +62,7 @@ export const ConflictModal: React.FC<ConflictModalProps> = ({
                     • {conflict.student.name}
                   </p>
                 </div>
-                <p className="text-[11px] text-slate-500">เลือกสาเหตุที่จะจำหน่ายเพียง 1 รายการ:</p>
+                <p className="text-[11px] text-slate-500">เลือกจำหน่ายอันนึง:</p>
                 <div className="grid grid-cols-2 sm:grid-cols-3 gap-2">
                   {conflict.reasons.map((reason) => {
                     const isSelected = currentChoice === reason;
@@ -105,7 +105,7 @@ export const ConflictModal: React.FC<ConflictModalProps> = ({
             className="px-5 py-2 bg-rose-600 hover:bg-rose-700 text-white rounded-xl text-sm font-bold shadow-md transition-colors flex items-center gap-1.5"
           >
             <CheckCircle2 className="w-4 h-4" />
-            <span>ยืนยันการเลือก</span>
+            <span>ยืนยัน</span>
           </button>
         </div>
       </div>
